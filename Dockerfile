@@ -5,7 +5,7 @@ MAINTAINER Justin Henderson justin@hasecuritysolutions.com
 RUN yum install -y python git
 RUN cd /opt && git clone https://github.com/SMAPPER/freq_server
 RUN mkdir /var/log/freq_server
-RUN ln -sf /dev/stderr /var/log/freq_server/error.log
+RUN ln -sf /dev/stderr /var/log/freq_server/freq_server.log
 RUN useradd -ms /bin/bash freq_server
 RUN chown -R freq_server: /opt/freq_server
 USER freq_server
